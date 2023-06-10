@@ -3,10 +3,9 @@
 #define    output(x)     cout<<x<<nl        // out
 using namespace std;
 
-void printArray(int arr[])
+void printArray(int arr[], int len)
 {
-    int len = sizeof(arr)/sizeof(arr[0]);
-    for (int i = 1; i < len; i++)
+    for (int i = 0; i < len; i++)
         cout << arr[i] << " ";
     cout << endl;
 }
