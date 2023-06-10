@@ -13,15 +13,16 @@ void printArray(int arr[], int len)
 
 void ReverseBubbleSort(int arr[], int len)
 {
-    for (int i = 1; i <len-1; i--)
+    for (int i = 0; i < len - 1; i++)
     {
-        for (int j = len - 1; j >= 0-1+i; j--)
+        for (int j = len - 1; j >= 0 + i; j--)
         {
-            if (arr[j] < arr[j + 1])
-                swap(arr[j], arr[j + 1]);
+            if (arr[j] > arr[j - 1]) 
+                swap(arr[j], arr[j - 1]); 
         }
     }
 }
+
 
 int main()
 {
@@ -37,5 +38,6 @@ int main()
 
     cout << "Sorted array: ";
     printArray(arr, n);
+
     return 0;
 }

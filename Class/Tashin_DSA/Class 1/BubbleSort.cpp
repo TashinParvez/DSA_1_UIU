@@ -35,7 +35,6 @@ int main()
     // cout<<sizeof(arr)<<endl;
 
     cout << "Original array: ";
-
     printArray(arr, n);
 
     bubbleSort(arr, n);
