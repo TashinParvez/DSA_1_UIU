@@ -17,7 +17,8 @@ int BinarySearch(int arr[], int len, int key)
 
     while (start <= last)
     {
-        int mid = (start + last) / 2;
+        // int mid = (start + last) / 2;
+        int mid = start + ((last - start) / 2);
         if (arr[mid] == key)
         {
             return mid;
@@ -38,7 +39,13 @@ int main()
 {
     int arr[] = {2, 3, 9, 10, 22, 32};
     int len = sizeof(arr) / sizeof(arr[0]);
-    int key = 9;
+    cout << "Given Array : " << nl;
+    printArray(arr, len);
+    cout << "Enter a number from array : ";
+
+    int key;
+    cin >> key;
+
     int index = BinarySearch(arr, len, key);
 
     cout << "index of key " << key << " is " << index << nl;

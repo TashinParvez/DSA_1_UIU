@@ -38,6 +38,7 @@ void countingSort(int a[], int len)
         b[count[a[i]] - 1] = a[i];
         count[a[i]]--;
     }
+    
     // 0 1 2 5 7 7 8 8 8 8 8 8 8 8 9
     // 1 2 3 3 3 4 4 6 14
 

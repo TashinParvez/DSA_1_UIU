@@ -23,7 +23,7 @@ void selectionSort(int array[], int size)
       // Select the minimum element in each loop.
 
       if (array[i] < array[min_idx]) // acending
-                                     // if (array[i] > array[min_idx]) // decending order
+        // if (array[i] > array[min_idx]) // decending order
         min_idx = i;
     }
 
