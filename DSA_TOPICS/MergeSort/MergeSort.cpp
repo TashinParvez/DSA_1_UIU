@@ -16,7 +16,7 @@ void merge(int *arr, int s, int e)
     int len1 = mid - s + 1;
     int len2 = e - mid;
 
-    int *first = new int[len1];
+    int *first = new int[len1]; // dinamic memory declear
     int *second = new int[len2];
 
     // copy values
@@ -26,7 +26,8 @@ void merge(int *arr, int s, int e)
         first[i] = arr[mainArrayIndex++];
     }
 
-    mainArrayIndex = mid + 1;
+    mainArrayIndex = mid + 1; // without this line code works perfectly
+
     for (int i = 0; i < len2; i++)
     {
         second[i] = arr[mainArrayIndex++];
@@ -84,9 +85,11 @@ void mergeSort(int *arr, int s, int e)
 
 int main()
 {
+    // int arr[] = {3, 7, 0, 1, 5, 8, 3, 2, 34, 66, 87, 23, 12, 12, 12};
+    int arr[] = {22, 32, 6, -2, 2, 3, 9, 10};
 
-    int arr[15] = {3, 7, 0, 1, 5, 8, 3, 2, 34, 66, 87, 23, 12, 12, 12};
-    int len = 15;
+    int len = sizeof(arr) / sizeof(arr[0]);
+
     cout << "Given  Array : ";
     printArray(arr, len);
 
