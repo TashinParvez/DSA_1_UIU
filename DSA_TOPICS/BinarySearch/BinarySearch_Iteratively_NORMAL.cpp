@@ -13,12 +13,11 @@ void printArray(int arr[], int len)
 int BinarySearch(int arr[], int len, int key)
 {
     int start = 0;
-    int last = len - 1;
+    int end = len - 1;
 
-    while (start <= last)
+    while (start <= end)
     {
-          // int mid = (start + last) / 2;
-        int mid = start + ((last - start) / 2);
+        int mid = start + ((end - start) / 2);
         if (arr[mid] == key)
         {
             return mid;
@@ -29,7 +28,7 @@ int BinarySearch(int arr[], int len, int key)
         }
         else if (arr[mid] > key)
         {
-            last = mid - 1;
+            end = mid - 1;
         }
     }
     return -1;
@@ -40,8 +39,11 @@ int main()
     int arr[] = {2, 3, 9, 10, 22, 32};
     int len = sizeof(arr) / sizeof(arr[0]);
     int key = 9;
-    int index = BinarySearch(arr, len, key);
 
+    cout << "Given array : ";
+    printArray(arr, len);
+
+    int index = BinarySearch(arr, len, key);
     cout << "index of key " << key << " is " << index << nl;
 
     return 0;

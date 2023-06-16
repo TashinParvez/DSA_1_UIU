@@ -85,8 +85,8 @@ void mergeSort(int *arr, int s, int e)
 
 int main()
 {
-    // int arr[] = {3, 7, 0, 1, 5, 8, 3, 2, 34, 66, 87, 23, 12, 12, 12};
-    int arr[] = {22, 32, 6, -2, 2, 3, 9, 10};
+    // int arr[] = {3, 7, 0, 1, 5, 8, 3, 2, 34, 66, 87, 23, 12, 12, 12}; // odd
+    int arr[] = {22, 32, 6, -2, 2, 3, 9, 10}; // even 
 
     int len = sizeof(arr) / sizeof(arr[0]);
 

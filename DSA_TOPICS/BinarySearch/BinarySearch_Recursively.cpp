@@ -14,10 +14,9 @@ int BinarySearch(int arr[], int len, int start, int end, int key)
 {
     if (start <= end)
     {
-        // int mid = (start + end) / 2;
         int mid = start + ((end - start) / 2);
 
-        if (arr[mid] == key)
+        if (arr[mid] == key) 
         {
             return mid;
         }
@@ -32,11 +31,10 @@ int BinarySearch(int arr[], int len, int start, int end, int key)
             return BinarySearch(arr, len, start, end, key);
         }
     }
-    else
+    else if (start > end) // base case
     {
         return -1;
     }
-    
 }
 
 int main()
