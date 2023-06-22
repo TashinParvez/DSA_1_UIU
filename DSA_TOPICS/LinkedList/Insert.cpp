@@ -64,8 +64,15 @@ void InsertAtLast(Node *&tail, int data)
     // tail = tail->nextNode;  // another way
 }
 
-void InsertAtposition(Node *&head, int position, int data)
+void InsertAtposition(Node *&head, Node *&tail, int position, int data)
 {
+    // Insert in the fist postion
+    if (position == 1)
+    {
+        InsertAtFirst(head, data);
+        return;
+    }
+
     Node *nodeToInsert = new Node(data);
     int cnt = 1;
     Node *traveler = head;
@@ -74,6 +81,14 @@ void InsertAtposition(Node *&head, int position, int data)
         traveler = traveler->nextNode;
         cnt++;
     }
+
+    // inserting at last position
+    if (traveler->nextNode == NULL)
+    {
+        InsertAtLast(tail, data);
+        return;
+    }
+
     nodeToInsert->nextNode = traveler->nextNode;
     traveler->nextNode = nodeToInsert;
 }
@@ -108,7 +123,7 @@ int32_t main()
 
     cout << "After Insertion in Last    : ";
     printLinkedList(head);
-    
+
     // insert in the begining
     InsertAtFirst(head, 1);
     InsertAtFirst(head, 12);
@@ -117,11 +132,14 @@ int32_t main()
     // print linked list
     cout << "After Insertion in fast    : ";
     printLinkedList(head);
-    
-    InsertAtposition(head,4,2);
-    
+
+    InsertAtposition(head, tail, 6, 2);
+
     cout << "After Insert_in_a_position : ";
     printLinkedList(head);
+
+    cout << "Head value = " << head->value;
+    cout << "  &&  Tail value = " << tail->value << nl;
 
     CRACKED;
 }
