@@ -64,9 +64,11 @@ void merge(int *arr, int s, int e)
     delete[] second;
 }
 
+ /* This is the implementation of the merge sort algorithm. */
 void mergeSort(int *arr, int s, int e)
 {
 
+   
     // base case
     if (s >= e)
         return;
