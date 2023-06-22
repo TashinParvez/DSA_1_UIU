@@ -112,8 +112,48 @@ void deleteNodeByPosition(Node *&head, Node *&tail, int postition)
     }
 }
 
-void deleteNodeByValue(Node *&head, int value)
+void deleteNodeByValue(Node *&head, Node *&tail, int value)
 {
+    int cnt = 1;
+    Node *traveler = head;
+    Node *followTraveler = NULL;
+    while (true)
+    {
+        if (traveler->value == value)
+        {
+            if (cnt == 1) // first element
+            {
+                head = traveler->nextNode;
+                traveler->nextNode = NULL;
+                delete traveler;
+                break;
+            }
+            else
+            {
+                if (traveler->nextNode == NULL) // last node
+                {
+                    tail = followTraveler;
+                    followTraveler->nextNode = NULL;
+                    traveler->nextNode = NULL;
+                    delete traveler;
+                    break;
+                }
+                else
+                {
+                    followTraveler->nextNode = traveler->nextNode;
+                    traveler->nextNode = NULL;
+                    delete traveler;
+                    break;
+                }
+            }
+        }
+        else
+        {
+            cnt++;
+            followTraveler = traveler;
+            traveler = traveler->nextNode;
+        }
+    }
 }
 
 void printLinkedList(Node *&head)
@@ -151,11 +191,17 @@ int32_t main()
     cout << "Head value = " << head->value;
     cout << "  &&  Tail value = " << tail->value << nl;
 
-    //--------------------------------------------- deletion
+    //--------------------------------------------- deletion by position
     // deleteNodeByPosition(head,tail, 1);  // first
     // deleteNodeByPosition(head,tail, 3);   // middle
-    deleteNodeByPosition(head, tail, 6); // last
-    cout << "After deleteNodeByPosition : ";
+    // deleteNodeByPosition(head, tail, 6); // last
+
+    //--------------------------------------------- deletion by Value
+    deleteNodeByValue(head, tail, 600); // first
+    deleteNodeByValue(head, tail, 300); // middle
+    deleteNodeByValue(head, tail, 100); // last
+
+    cout << "After deleteNodeBy         : ";
     printLinkedList(head);
 
     cout << "Head value = " << head->value;
