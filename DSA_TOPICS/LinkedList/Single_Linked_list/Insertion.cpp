@@ -95,7 +95,7 @@ void InsertAtposition(Node *&head, Node *&tail, int position, int data)
 
 void printLinkedList(Node *&head)
 {
-    Node *tempHead = head;
+    Node *tempHead = head; 
     while (tempHead != NULL)
     {
         cout << tempHead->value << " ";

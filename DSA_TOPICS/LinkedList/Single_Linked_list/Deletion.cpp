@@ -44,9 +44,7 @@ public:
         this->nextNode = NULL;
     }
 
-    Node() // default constructor
-    {
-    }
+    Node() {} // default constructor
 
     // distructor
     ~Node()
