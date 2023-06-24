@@ -53,6 +53,18 @@ void printLinkedList(Node *&head)
     }
     cout << nl;
 }
+int getLengthOfLinkedList(Node *&head)
+{
+    Node *traveller = head;
+    int cnt = 0;
+    while (traveller != NULL)
+    {
+        cnt++;
+        traveller = traveller->nextNode;
+    }
+
+    return cnt;
+}
 
 int32_t main()
 {
@@ -60,9 +72,11 @@ int32_t main()
 
     Node *head = NULL;
     Node *node1 = new Node(12);
+
     head = node1;
 
     printLinkedList(head);
+    getLengthOfLinkedList(head);
 
     CRACKED;
 }
