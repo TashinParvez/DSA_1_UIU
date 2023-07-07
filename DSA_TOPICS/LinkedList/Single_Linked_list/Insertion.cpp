@@ -43,10 +43,6 @@ public:
         this->value = value;
         this->nextNode = NULL;
     }
-
-    Node() // default constructor
-    {
-    }
 };
 
 void InsertAtFirst(Node *&head, int data)
@@ -73,9 +69,10 @@ void InsertAtposition(Node *&head, Node *&tail, int position, int data)
         return;
     }
 
+    Node *traveler = head;
     Node *nodeToInsert = new Node(data);
     int cnt = 1;
-    Node *traveler = head;
+
     while (cnt < position - 1)
     {
         traveler = traveler->nextNode;
@@ -95,7 +92,7 @@ void InsertAtposition(Node *&head, Node *&tail, int position, int data)
 
 void printLinkedList(Node *&head)
 {
-    Node *tempHead = head; 
+    Node *tempHead = head;
     while (tempHead != NULL)
     {
         cout << tempHead->value << " ";
