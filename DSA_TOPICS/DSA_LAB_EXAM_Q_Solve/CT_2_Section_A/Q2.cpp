@@ -20,30 +20,29 @@
     } // array print
 using namespace std;
 
-int BinarySearch(int arr[], int len, int key)
+int BinarySearch(int arr[], int len)
 {
     int start = 0;
     int end = len - 1;
+    int ans;
 
-    while (start <= end)
+    while (start < end)
     {
-        int mid = start + ((end - start) / 2);
-        // int mid = ( start + end ) / 2);
-
-        if (arr[mid] == key)
+        int mid = (start + end) / 2;
+        if (mid == arr[mid])
         {
-            return mid;
-        }
-        else if (arr[mid] < key)
-        {
+            ans = mid + 1;
             start = mid + 1;
         }
-        else if (arr[mid] > key)
+        else
         {
+            ans = mid - 1;
             end = mid - 1;
         }
+        // cout << "RUNNING" << nl;
     }
-    return -1;
+
+    return ans;
 }
 
 /*
@@ -53,6 +52,25 @@ smallest missing non-negative element in it using binary search.
 int32_t main()
 {
     faster;
+
+    // Find the smallest missing number
+
+    // int n;
+    // cout << "Enter array length \nthen elements" << nl;
+    // cin >> n;
+    // // 6
+    // // 4 1 2 7 6 5
+
+    // int arr[n];
+    // for (int i = 0; i < n; i++)
+    // {
+    //     cin >> arr[i];
+    // }
+
+    int arr[] = {0, 1,  3, 4, 6, 9, 11, 15};
+
+    int n = sizeof(arr) / sizeof(arr[0]);
+    cout << BinarySearch(arr, n) << nl;
 
     CRACKED;
 }
