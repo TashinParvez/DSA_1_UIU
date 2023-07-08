@@ -20,23 +20,39 @@
     } // array print
 using namespace std;
 
+int BinarySearch(int arr[], int len, int key)
+{
+    int start = 0;
+    int end = len - 1;
+
+    while (start <= end)
+    {
+        int mid = start + ((end - start) / 2);
+        // int mid = ( start + end ) / 2);
+
+        if (arr[mid] == key)
+        {
+            return mid;
+        }
+        else if (arr[mid] < key)
+        {
+            start = mid + 1;
+        }
+        else if (arr[mid] > key)
+        {
+            end = mid - 1;
+        }
+    }
+    return -1;
+}
+
+/*
+Given a sorted array of non-negative distinct integers, find the
+smallest missing non-negative element in it using binary search.
+*/
 int32_t main()
 {
     faster;
-    string s;
-    getline(cin, s); // take line
-
-    for (int i = 0; i < s.length(); i++)
-    {
-        if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
-            cout << s[i];
-        else
-            cout << '_';
-    }
-    cout << '_';
-    cout << '_';
-    
-    cout << nl;
 
     CRACKED;
 }

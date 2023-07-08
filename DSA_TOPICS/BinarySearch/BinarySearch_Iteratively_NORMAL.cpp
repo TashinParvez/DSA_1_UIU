@@ -18,6 +18,8 @@ int BinarySearch(int arr[], int len, int key)
     while (start <= end)
     {
         int mid = start + ((end - start) / 2);
+        // int mid = ( start + end ) / 2);
+        
         if (arr[mid] == key)
         {
             return mid;
@@ -38,6 +40,7 @@ int main()
 {
     int arr[] = {2, 3, 9, 10, 22, 32};
     int len = sizeof(arr) / sizeof(arr[0]);
+
     int key = 9;
 
     cout << "Given array : ";

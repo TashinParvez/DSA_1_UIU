@@ -45,6 +45,7 @@ void bubbleSort(int arr[], int n)
 /*
  Find the nth largest number from an unsorted array
 */
+
 int32_t main()
 {
     faster;
@@ -54,7 +55,7 @@ int32_t main()
     cin >> n;
     // 6
     // 4 1 2 7 6 5
-    
+
     int arr[n];
     for (int i = 0; i < n; i++)
     {

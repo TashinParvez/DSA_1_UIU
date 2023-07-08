@@ -9,7 +9,6 @@
 #define CRACKED return 0;
 #define nl endl; // NewLine
 
-#define int long long
 #define output(x) cout << x << nl // out
 #define printarray(arr, len)      \
     for (int i = 0; i < len; i++) \
@@ -20,23 +19,42 @@
     } // array print
 using namespace std;
 
-int32_t main()
+/*
+Given_an_array_of_integers__Write_a_program_to_
+   calculate_the_product_of_a_particular_number_and_its_previous_number_using_linear_search___
+*/
+
+int LinearSearch(int arr[], int len, int num)
+{
+    for (int i = 0; i < len; i++)
+        if (arr[i] == num)
+            return i;
+    return -1;
+}
+
+int main()
 {
     faster;
-    string s;
-    getline(cin, s); // take line
 
-    for (int i = 0; i < s.length(); i++)
+    int n;
+    cout << "Enter array length \nthen elements" << nl;
+    cin >> n;
+    // 6
+    // 4 1 2 7 6 5
+
+    int arr[n];
+    for (int i = 0; i < n; i++)
     {
-        if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
-            cout << s[i];
-        else
-            cout << '_';
+        cin >> arr[i];
     }
-    cout << '_';
-    cout << '_';
+
+    cout << "Enter the number : ";
+    int number;
+    cin >> number;
     
-    cout << nl;
+    int index = LinearSearch(arr, n, number);
+
+    cout << arr[index] * arr[index - 1] << nl;
 
     CRACKED;
 }
