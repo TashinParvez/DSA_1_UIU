@@ -230,9 +230,9 @@ int main()
             return 0;
         else if (ch == 13)
         {
-
             // question ans of sec B by Tashin  Parvez
             // 13. Search a element occurance
+            
             cout << "Enter the element : " << endl;
             int element;
             cin >> element;
