@@ -233,6 +233,7 @@ int main()
 
             // question ans of sec B by Tashin  Parvez
             // 13. Search a element occurance
+            cout << "Enter the element : " << endl;
             int element;
             cin >> element;
             searchOccurance(head, element);
