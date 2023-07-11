@@ -10,7 +10,7 @@ void printArray(int arr[], int len)
 
 int partition(int arr[], int s, int e)
 {
-    int pivot = arr[e]; // select the rightmost element as pivot
+    int pivot = arr[e]; // select the right-most element as pivot
     int i = s - 1;
     int j = s;
 
