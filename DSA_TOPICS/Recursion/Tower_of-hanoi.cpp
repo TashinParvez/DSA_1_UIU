@@ -9,7 +9,6 @@
 #define CRACKED return 0;
 #define nl endl; // NewLine
 
-#define int long long
 #define output(x) cout << x << nl // out
 #define printarray(arr, len)      \
     for (int i = 0; i < len; i++) \
@@ -20,19 +19,22 @@
     } // array print
 using namespace std;
 
+void TOH(int n, int a, int b, int c)
+{
+    if (n > 0)
+    {
+        TOH(n - 1, a, c, b);
+        cout << a << " to " << c << nl;
+        TOH(n - 1, b, a, c);
+    }
+}
+
 int32_t main()
 {
     faster;
-    stack<int> s;
 
-    s.push(10);
-    s.push(100);
-    s.pop();
-    s.push(1000);
+    TOH(3, 1, 2, 3);
+    // disks--from--using--to
 
-    cout << s.empty() << nl;
-    cout << s.top() << nl;
-    cout << s.size() << nl;
- 
     CRACKED;
 }
