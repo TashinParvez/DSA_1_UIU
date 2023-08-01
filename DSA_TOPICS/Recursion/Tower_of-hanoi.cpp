@@ -34,7 +34,7 @@ int32_t main()
     faster;
 
     TOH(3, 1, 2, 3);
-    // disks--from--using--to
+    // disks--from--using--to 
 
     CRACKED;
 }
