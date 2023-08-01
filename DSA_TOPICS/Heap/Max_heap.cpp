@@ -19,7 +19,7 @@ public:
     heap()
     {
         size = 0;
-        arr[0] = -1; 
+        arr[0] = -1;
     }
 
     void insert(int value)
@@ -41,6 +41,41 @@ public:
             }
         }
     }
+
+    // deletion from the heap
+    void deletion()
+    {
+        if (size == 0)
+        {
+            cout << " Nothing to delete " << nl;
+            return;
+        }
+        // swap root and last
+        swap(arr[1], arr[size]);
+        size--;
+
+        // take root to his correct destination
+        int index = 1;
+        while (index < size)
+        {
+            int leftChild = index * 2;
+            int rightChild = index * 2 + 1;
+
+            if (leftChild < size && arr[leftChild] > arr[index])
+            {
+                swap(arr[index], arr[leftChild]);
+                index = leftChild;
+            }
+            else if (rightChild < size && arr[rightChild] > arr[index])
+            {
+                swap(arr[index], arr[rightChild]);
+                index = rightChild;
+            }
+            else
+                return;
+        }
+    }
+
     void printHeap()
     {
         for (int i = 1; i <= size; i++)
@@ -50,6 +85,28 @@ public:
         cout << nl;
     }
 };
+
+// heapify function for the max heap
+void maxheapify(int arr[], int size, int index)
+{
+    int leftChild = index * 2;
+    int rightChild = index * 2 + 1;
+
+    int largest = index;
+    if (leftChild <= size && arr[largest] < arr[leftChild])
+    {
+        largest = leftChild;
+    }
+    if (rightChild <= size && arr[largest] < arr[rightChild])
+    {
+        largest = rightChild;
+    }
+    if (largest != index)
+    {
+        swap(arr[largest], arr[index]);
+        maxheapify(arr, size, largest);
+    }
+}
 
 int32_t main()
 {
@@ -62,6 +119,21 @@ int32_t main()
     h.insert(2312);
 
     h.printHeap();
+    h.deletion();
+
+    h.printHeap();
+
+    int arr[] = {-1, 123, 33, 32134, 343, 3, 3, 34, 5, 44, 4, 4};
+    int length = sizeof(arr) / sizeof(arr[0]);
+
+    for (int i = length / 2; i >= 1; i--)
+        maxheapify(arr, length - 1, 1);
+
+    for (int i = 1; i <= length - 1; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << nl;
 
     CRACKED;
 }
