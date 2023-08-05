@@ -5,18 +5,17 @@ using namespace std;
 
 /*
 
-implement enqueue and dequeue using only two stacks
+    implement enqueue and dequeue using only two stacks
 
-STEP 1 − We have two stacks, one for enqueueing and one for dequeueing.
+    STEP 1 − We have two stacks, one for enqueueing and one for dequeueing.
 
-STEP 2 − We enqueue by pushing onto the enqueue stack.
+    STEP 2 − We enqueue by pushing onto the enqueue stack.
 
-STEP 3 − We dequeue by popping from the dequeue stack.
+    STEP 3 − We dequeue by popping from the dequeue stack.
 
-STEP 4 − If the dequeue stack is empty, we pop everything from the enqueue stack and push it onto the dequeue stack.
+    STEP 4 − If the dequeue stack is empty, we pop everything from the enqueue stack and push it onto the dequeue stack.
 
-STEP 5 − This reverses the order so that the oldest item is now at the top of the dequeue stack.
-
+    STEP 5 − This reverses the order so that the oldest item is now at the top of the dequeue stack.
 
 */
 
