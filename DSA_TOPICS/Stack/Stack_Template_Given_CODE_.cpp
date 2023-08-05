@@ -116,20 +116,3 @@ int main()
 
     return 0;
 }
-
-
-
-// int main()
-// {
-//     head = NULL;
-//     push(10);
-//     push(100);
-//     push(100);
-//     push(100);
-//     push(100);
-
-//     // printStack();
-//     display();
-
-//     CRACKED;
-// }
