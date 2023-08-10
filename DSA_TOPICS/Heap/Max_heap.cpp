@@ -92,21 +92,31 @@ void maxheapify(int arr[], int size, int index)
     int leftChild = index * 2;
     int rightChild = index * 2 + 1;
 
-    int largest = index;
+    int largest = index; // parent
+
     if (leftChild <= size && arr[largest] < arr[leftChild])
     {
         largest = leftChild;
     }
+
     if (rightChild <= size && arr[largest] < arr[rightChild])
     {
         largest = rightChild;
     }
+
     if (largest != index)
     {
         swap(arr[largest], arr[index]);
         maxheapify(arr, size, largest);
     }
 }
+
+
+
+
+
+
+
 
 int32_t main()
 {
@@ -124,6 +134,7 @@ int32_t main()
     h.printHeap();
 
     int arr[] = {-1, 123, 33, 32134, 343, 3, 3, 34, 5, 44, 4, 4};
+
     int length = sizeof(arr) / sizeof(arr[0]);
 
     for (int i = length / 2; i >= 1; i--)
@@ -134,6 +145,8 @@ int32_t main()
         cout << arr[i] << " ";
     }
     cout << nl;
+
+    // h.printHeap();
 
     CRACKED;
 }
