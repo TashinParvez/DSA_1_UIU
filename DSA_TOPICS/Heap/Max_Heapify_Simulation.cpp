@@ -54,9 +54,9 @@ int32_t main()
 
     // check this all arrays visualization onr by one to understand heapify clearly
 
-    int arr[] = {-1, 123, 33, 32134, 343, 31, 3, 34, 5, 44, 42, 4};
+    // int arr[] = {-1, 123, 33, 32134, 343, 31, 3, 34, 5, 44, 42, 4};
     // int arr[] = {-1, 123, 33, 32134, 343, 31, 3, 34, 5, 44, 42, 4455454};
-    // int arr[] = {-1,16,14,10,8,7,9,3,2,4,1};
+    int arr[] = {-1, 9, 3, 2, 4, 1, 16, 14, 10, 8, 7};
     // int arr[] = {-1, 50,30,15,19,20,10,5,2};
 
     int length = sizeof(arr) / sizeof(arr[0]);
