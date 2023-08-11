@@ -13,6 +13,7 @@ void printArray(int arr[], int len)
         cout << arr[i] << " ";
     cout << endl;
 }
+int Total_Call_count_of_maxheapify = 0;
 
 // heapify function for the min heap
 void maxheapify(int arr[], int size, int index) //    maxheapify (arr, length - 1, i)
@@ -44,11 +45,14 @@ void maxheapify(int arr[], int size, int index) //    maxheapify (arr, length - 
         cout << "swap  " << arr[largest] << " < - - > " << arr[index] << nl;
         swap(arr[largest], arr[index]);
         printArray(arr, size + 1);
+        cout << nl;
+
+        cout << "------ Recursion ------" << nl;
+        Total_Call_count_of_maxheapify++;
         maxheapify(arr, size, largest);
     }
     cout << nl;
 }
-
 int32_t main()
 {
 
@@ -56,7 +60,7 @@ int32_t main()
 
     // int arr[] = {-1, 123, 33, 32134, 343, 31, 3, 34, 5, 44, 42, 4};
     // int arr[] = {-1, 123, 33, 32134, 343, 31, 3, 34, 5, 44, 42, 4455454};
-    int arr[] = {-1, 9, 3, 2, 4, 1, 16, 14, 10, 8, 7};
+    int arr[] = {-1, 9, 3, 2, 4, 1, 16, 14, 10, 8, 7}; // Good Example
     // int arr[] = {-1, 50,30,15,19,20,10,5,2};
 
     int length = sizeof(arr) / sizeof(arr[0]);
@@ -66,15 +70,21 @@ int32_t main()
     printArray(arr, length);
 
     cout << "Length " << length << nl;
+    cout << nl;
+
     for (int i = length / 2; i >= 1; i--)
     {
         cout << "Calling maxHeapify  index = " << i << "   value = " << arr[i] << nl;
+        cout << "``````````````````````````````````````````" << nl;
+        Total_Call_count_of_maxheapify++;
         maxheapify(arr, length - 1, i);
     }
 
     cout << nl;
     cout << "Final Print " << nl;
     printArray(arr, length);
+    cout << nl;
+    cout << "Total_Call_count_of_maxheapify  " << Total_Call_count_of_maxheapify << nl;
     cout << nl;
 
     CRACKED;
