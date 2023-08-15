@@ -11,7 +11,7 @@
 #define output(x) cout << x << nl // out
 using namespace std;
 
-class heap
+class heap 
 {
 public:
     int size = 0;

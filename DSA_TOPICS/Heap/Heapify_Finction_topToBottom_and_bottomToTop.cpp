@@ -37,7 +37,7 @@ void maxheapify_top_to_bottom(int arr[], int size, int index)
 
     if (rightChild <= size && arr[largest] < arr[rightChild])
     {
-        largest = rightChild;
+        largest = rightChild; 
     }
 
     if (largest != index)
