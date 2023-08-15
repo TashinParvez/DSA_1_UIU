@@ -13,20 +13,25 @@ void printArray(int arr[], int len)
         cout << arr[i] << " ";
     cout << endl;
 }
+
 int Total_Call_count_of_maxheapify = 0;
 
-// heapify function for the min heap
+// heapify function for the max heap
+// top to bottom approach
 void maxheapify(int arr[], int size, int index) //    maxheapify (arr, length - 1, i)
 {
     int leftChild = index * 2;
     int rightChild = index * 2 + 1;
 
-    cout << "Index " << index << nl;
-    if (leftChild <= size)
-        cout << "Left child = " << arr[leftChild] << "    ";
-    if (rightChild <= size)
-        cout << "Right child = " << arr[rightChild];
-    cout << nl;
+    // debug code
+    {
+        cout << "Index " << index << nl;
+        if (leftChild <= size)
+            cout << "Left child = " << arr[leftChild] << "    ";
+        if (rightChild <= size)
+            cout << "Right child = " << arr[rightChild];
+        cout << nl;
+    }
 
     int largest = index; // parent
 
@@ -53,6 +58,7 @@ void maxheapify(int arr[], int size, int index) //    maxheapify (arr, length - 
     }
     cout << nl;
 }
+
 int32_t main()
 {
 
@@ -79,11 +85,12 @@ int32_t main()
         Total_Call_count_of_maxheapify++;
         maxheapify(arr, length - 1, i);
     }
-
     cout << nl;
+
     cout << "Final Print " << nl;
     printArray(arr, length);
     cout << nl;
+
     cout << "Total_Call_count_of_maxheapify  " << Total_Call_count_of_maxheapify << nl;
     cout << nl;
 
