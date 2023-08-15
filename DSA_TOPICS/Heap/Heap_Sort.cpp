@@ -43,7 +43,9 @@ void heapSort(int arr[], int size)
 
 int32_t main()
 {
-    int arr[] = {-1, 12, 11, 13, 5, 6, 7};
+    // int arr[] = {-1, 12, 11, 13, 5, 6, 7};
+    int arr[] = {-1, 10, 5, 3, 2, 4};
+
     int length = sizeof(arr) / sizeof(arr[0]);
 
     // creating heap [max]

@@ -11,7 +11,7 @@
 #define output(x) cout << x << nl // out
 using namespace std;
 
-class heap 
+class heap
 {
 public:
     int size = 0;
@@ -127,6 +127,7 @@ int32_t main()
     h.printHeap();
 
     int arr[] = {-1, 123, 33, 32134, 343, 3, 3, 34, 5, 44, 4, 4};
+    // int arr[] = {-1, 10, 5, 3, 2, 4};
 
     int length = sizeof(arr) / sizeof(arr[0]);
 
