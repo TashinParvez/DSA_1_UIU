@@ -12,6 +12,7 @@ void printArray(int arr[], int len)
         cout << arr[i] << " ";
     cout << endl;
 }
+
 int heapify_topToBottom(int arr[], int size, int index)
 {
     int largest = index;
@@ -27,7 +28,7 @@ int heapify_topToBottom(int arr[], int size, int index)
     if (index != largest)
     {
         swap(arr[index], arr[largest]);
-        heapify_topToBottom(arr, largest, 1);
+        heapify_topToBottom(arr, size, largest);
     }
 }
 
@@ -35,7 +36,7 @@ void heapSort(int arr[], int size)
 {
     while (size > 1)
     {
-        swap(arr[1], arr[size]);
+        swap(arr[1], arr[size]); // take max element to the last leaf
         size--;
         heapify_topToBottom(arr, size, 1);
     }
@@ -44,9 +45,13 @@ void heapSort(int arr[], int size)
 int32_t main()
 {
     // int arr[] = {-1, 12, 11, 13, 5, 6, 7};
-    int arr[] = {-1, 10, 5, 3, 2, 4};
+    // int arr[] = {-1, 10, 5, 3, 2, 4};
+    int arr[] = {-1, 2, 10, 4, 7, 1, 8, 9, 3, 6, 5};
 
     int length = sizeof(arr) / sizeof(arr[0]);
+
+    cout << "Given  Array:  ";
+    printArray(arr, length);
 
     // creating heap [max]
     for (int i = length / 2; i >= 1; i--)
@@ -54,10 +59,10 @@ int32_t main()
         heapify_topToBottom(arr, length - 1, i);
     }
 
-    cout << "Given Array:  ";
+    cout << "Heap   Array:  ";
     printArray(arr, length);
 
-    heapSort(arr, length - 1);
+    heapSort(arr, length - 1); // send actual heap size
 
     cout << "Sorted array: ";
     printArray(arr, length);
