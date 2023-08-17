@@ -36,9 +36,9 @@ void heapSort(int arr[], int size)
 {
     while (size > 1)
     {
-        swap(arr[1], arr[size]); // take max element to the last leaf
-        size--;
-        heapify_topToBottom(arr, size, 1);
+        swap(arr[1], arr[size]);           // take max element to the last leaf
+        size--;                            // in each iteration we get left numbers higgest element
+        heapify_topToBottom(arr, size, 1); // by doing swap er get the smallest number in the root so take it its own place call heapify
     }
 }
 
@@ -54,6 +54,7 @@ int32_t main()
     printArray(arr, length);
 
     // creating heap [max]
+    // buildMaxHeap
     for (int i = length / 2; i >= 1; i--)
     {
         heapify_topToBottom(arr, length - 1, i);
