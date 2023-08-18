@@ -50,27 +50,7 @@ void postOrderTraversal(node *root)
     postOrderTraversal(root->rightNode);
     cout << root->data << " ";
 }
-
-//************* basic Logic of In-Order *************
-/*
-// it also works
-
-void InOrderTraversal(node *root)
-{
-    if (root->leftNode)                     // if leftNode != null --> (LPR call)
-    {
-        InOrderTraversal(root->leftNode);
-    }
-
-    cout << root->data << " ";             // it is printing all values
-
-    if (root->rightNode)
-    {
-        InOrderTraversal(root->rightNode); // same as leftNode
-    }
-}
-
-*/
+ 
 int32_t main()
 {
     node *root = NULL;
