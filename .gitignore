@@ -2,3 +2,4 @@ RemoveexeFile.c
 RemoveexeFile.exe
 *.exe
 *.vscode
+*.cph
