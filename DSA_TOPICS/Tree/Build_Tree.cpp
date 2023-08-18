@@ -49,5 +49,8 @@ int32_t main()
     // creating tree
     root = buildTree(root);
 
+    // input
+    // 1 2 4 -1 -1 5 -1 -1 3 -1 6 -1 -1
+
     CRACKED;
 }
