@@ -42,13 +42,13 @@ node *buildTree(node *root)
     return root;
 }
 
-void InOrderTraversal(node *root)
+void postOrderTraversal(node *root)
 {
     if (root == null)
         return;
-    InOrderTraversal(root->leftNode);
+    postOrderTraversal(root->leftNode);
+    postOrderTraversal(root->rightNode);
     cout << root->data << " ";
-    InOrderTraversal(root->rightNode);
 }
 
 //************* basic Logic of In-Order *************
@@ -81,14 +81,15 @@ int32_t main()
     // input:     1 2 4 -1 -1 5 -1 -1 3 -1 6 -1 -1
     // In order:  4 2 5 1 3 6
     // Pre Order: 1 2 4 5 3 6
+    // postOrder: 4 5 2 6 3 1
 
     // another input: 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
     // Pre Order:     1 3 7 11 5 17
 
     // level order traversal
 
-    cout << nl << "Inorder Traversal : ";
-    InOrderTraversal(root);
+    cout << nl << "Pre-Order Traversal : ";
+    postOrderTraversal(root);
     cout << nl;
 
     CRACKED;
