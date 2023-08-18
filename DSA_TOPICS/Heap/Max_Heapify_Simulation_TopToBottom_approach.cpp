@@ -53,11 +53,12 @@ void maxheapify(int arr[], int size, int index) //    maxheapify (arr, length - 
         cout << nl;
 
         cout << "------ Recursion ------" << nl;
-        Total_Call_count_of_maxheapify++;
+        Total_Call_count_of_maxheapify++; 
         maxheapify(arr, size, largest);
     }
     cout << nl;
 }
+
 void buildMaxHeap(int arr[], int length)
 {
     for (int i = length / 2; i >= 1; i--)
@@ -76,10 +77,10 @@ int32_t main()
 
     // int arr[] = {-1, 123, 33, 32134, 343, 31, 3, 34, 5, 44, 42, 4};
     // int arr[] = {-1, 123, 33, 32134, 343, 31, 3, 34, 5, 44, 42, 4455454};
-    // int arr[] = {-1, 9, 3, 2, 4, 1, 16, 14, 10, 8, 7}; // Good Example
+    int arr[] = {-1, 9, 3, 2, 4, 1, 16, 14, 10, 8, 7}; // Good Example
     // int arr[] = {-1, 50,30,15,19,20,10,5,2};
     // int arr[] = {-1, 12, 11, 13, 5, 6, 7};
-    int arr[] = {-1, 2, 10, 4, 7, 1, 8, 9, 3, 6, 5};
+    // int arr[] = {-1, 2, 10, 4, 7, 1, 8, 9, 3, 6, 5};
 
     int length = sizeof(arr) / sizeof(arr[0]);
 

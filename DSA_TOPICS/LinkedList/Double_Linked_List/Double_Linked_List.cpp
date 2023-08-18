@@ -2,21 +2,8 @@
 //        ****************  Updated:    22-06-23     *************************\
 
 #include <iostream>
-#define faster                          \
-      ios_base::sync_with_stdio(false); \
-      cin.tie(0);                       \
-      cout.tie(0);
 #define CRACKED return 0;
 #define nl endl; // NewLine
-
-#define output(x) cout << x << nl // out
-#define printarray(arr, len)        \
-      for (int i = 0; i < len; i++) \
-      {                             \
-            cout << arr[i] << " ";  \
-            if (i + 1 == len)       \
-                  cout << endl;     \
-      } // array print
 using namespace std;
 
 // by using structure
@@ -88,6 +75,7 @@ void InsertAtFirst(Node *&head, int data)
       newNode->nextNode = head;
       head = newNode;
 }
+
 void InsertAtLast(Node *&tail, int data)
 {
       Node *newNode = new Node(data);
@@ -160,7 +148,6 @@ void deleteNodeByPosition(Node *&head, Node *&tail, int position)
 
 int32_t main()
 {
-      faster;
 
       int data = 1000;
 
