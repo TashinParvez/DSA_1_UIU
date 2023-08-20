@@ -49,19 +49,34 @@ node *insert(node *&root, int key)
             traveller = traveller->leftNode;
         }
     }
-
     return root;
 }
 
 int cnt = 0;
-void preOrderTraversal(node *root)
+void preOrderTraversal(node *root) // using a global variable
 {
     if (root == null)
         return;
-    if (root->leftNode == null && root->rightNode == null)
+    else
+    {
         cnt++;
+    }
+
     preOrderTraversal(root->leftNode);
     preOrderTraversal(root->rightNode);
+}
+
+//************    another logic
+
+int countAllNodes(node *root)
+{
+    if (root == null)
+        return 0;
+
+    int left = countAllNodes(root->leftNode);
+    int right = countAllNodes(root->rightNode);
+
+    return left + right + 1;
 }
 
 int32_t main()
@@ -77,16 +92,15 @@ int32_t main()
         cout << "enter data: ";
         cin >> data;
         if (data == -1)
-        {
             break;
-        }
         root = insert(root, data);
     }
 
     cout << nl;
     preOrderTraversal(root);
-
-    cout << "Leaf nodes " << cnt;
+    cout << "Total nodes ";
+    cout << cnt << " ";             // opt 1
+    // cout << countAllNodes(root); // opt 2
     cout << nl;
 
     CRACKED;

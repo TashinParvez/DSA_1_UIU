@@ -22,12 +22,9 @@ node *insert(node *&root, int key)
     newNode->rightNode = null;
 
     if (root == null)
-    {
         return newNode;
-    }
-    node *traveller = root;
 
-    // cout << "ROOT " << root->data << nl;
+    node *traveller = root;
     while (true)
     {
         if (traveller->data < key)
@@ -49,19 +46,19 @@ node *insert(node *&root, int key)
             traveller = traveller->leftNode;
         }
     }
-
     return root;
 }
 
-int cnt = 0;
-void preOrderTraversal(node *root)
+ 
+int countAllNodesValue(node *root)
 {
     if (root == null)
-        return;
-    if (root->leftNode == null && root->rightNode == null)
-        cnt++;
-    preOrderTraversal(root->leftNode);
-    preOrderTraversal(root->rightNode);
+        return 0;
+
+    int left = countAllNodesValue(root->leftNode);
+    int right = countAllNodesValue(root->rightNode);
+
+    return left + right + root->data;
 }
 
 int32_t main()
@@ -77,16 +74,13 @@ int32_t main()
         cout << "enter data: ";
         cin >> data;
         if (data == -1)
-        {
             break;
-        }
         root = insert(root, data);
     }
 
     cout << nl;
-    preOrderTraversal(root);
-
-    cout << "Leaf nodes " << cnt;
+    cout << "Total nodes Sum = ";
+    cout << countAllNodesValue(root);
     cout << nl;
 
     CRACKED;

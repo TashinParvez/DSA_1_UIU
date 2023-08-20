@@ -49,19 +49,20 @@ node *insert(node *&root, int key)
             traveller = traveller->leftNode;
         }
     }
-
     return root;
 }
 
-int cnt = 0;
-void preOrderTraversal(node *root)
+//************    another logic
+
+int heightOfTree(node *root)
 {
     if (root == null)
-        return;
-    if (root->leftNode == null && root->rightNode == null)
-        cnt++;
-    preOrderTraversal(root->leftNode);
-    preOrderTraversal(root->rightNode);
+        return 0;
+
+    int left = heightOfTree(root->leftNode);
+    int right = heightOfTree(root->rightNode);
+
+    return max(left, right) + 1; 
 }
 
 int32_t main()
@@ -71,22 +72,29 @@ int32_t main()
     // input
     //  4 5 1 2 3 6 -1
 
+    /*
+     4
+    / \
+   1   5
+    \   \
+     2   6
+      \
+       3
+    */
+
     int data;
     while (1)
     {
         cout << "enter data: ";
         cin >> data;
         if (data == -1)
-        {
             break;
-        }
         root = insert(root, data);
     }
 
     cout << nl;
-    preOrderTraversal(root);
-
-    cout << "Leaf nodes " << cnt;
+    cout << "Total nodes ";
+    cout << heightOfTree(root);
     cout << nl;
 
     CRACKED;

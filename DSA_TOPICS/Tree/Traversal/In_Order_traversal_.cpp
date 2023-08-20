@@ -52,9 +52,8 @@ void InOrderTraversal(node *root)
 }
 
 //************* basic Logic of In-Order *************
+//*************     it also works
 /*
-// it also works
-
 void InOrderTraversal(node *root)
 {
     if (root->leftNode)                     // if leftNode != null --> (LPR call)
