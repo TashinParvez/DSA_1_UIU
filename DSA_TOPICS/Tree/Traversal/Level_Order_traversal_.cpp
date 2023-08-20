@@ -41,7 +41,7 @@ node *buildTree(node *root)
 
     return root;
 }
- 
+
 void levelOrderTraversal(node *root)
 {
     queue<node *> q;
@@ -77,7 +77,7 @@ void levelOrderTraversal(node *root)
             {
                 q.push(temp->rightNode);
             }
-        } // goto 78 no line
+        } // goto 53 no line
     }
 }
 

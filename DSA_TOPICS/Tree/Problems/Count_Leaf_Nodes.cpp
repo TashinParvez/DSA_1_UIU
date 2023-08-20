@@ -53,11 +53,13 @@ node *insert(node *&root, int key)
     return root;
 }
 
+int cnt = 0;
 void preOrderTraversal(node *root)
 {
     if (root == null)
         return;
-    cout << root->data << " ";
+    if (root->leftNode == null && root->rightNode == null)
+        cnt++;
     preOrderTraversal(root->leftNode);
     preOrderTraversal(root->rightNode);
 }
@@ -82,8 +84,9 @@ int32_t main()
     }
 
     cout << nl;
-    cout << "Tree Traversal: ";
     preOrderTraversal(root);
+
+    cout << "Leaf nodes " << cnt;
     cout << nl;
 
     CRACKED;
