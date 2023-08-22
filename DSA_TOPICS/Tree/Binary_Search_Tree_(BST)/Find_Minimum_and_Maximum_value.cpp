@@ -3,7 +3,7 @@
 
 #include <bits/stdc++.h>
 #define CRACKED return 0;
-#define nl endl // NewLine
+#define nl endl; // NewLine
 #define null NULL
 using namespace std;
 
@@ -42,44 +42,51 @@ node *buildTree(node *root)
     return root;
 }
 
-void levelOrderTraversal(node *root)
+//********  Iteratively  *********
+
+int minimumOfTheTree(node *root)
 {
-    queue<node *> q;
-    q.push(root);
-    q.push(null);
+    while (root->leftNode != null)
+        root = root->leftNode;
 
-    while (!q.empty())
-    {
-        node *temp = q.front();
-        q.pop();
-
-        if (temp == null)
-        {
-            cout << nl;
-            /*
-                 when temp becomes null,
-                 at that moment last level parents childs are already
-                 entered in the queue thst is why here adding new null object
-            */
-            if (!q.empty())
-            {
-                q.push(null);
-            }
-        }
-        else
-        {
-            cout << temp->data << " ";
-            if (temp->leftNode)
-            {
-                q.push(temp->leftNode);
-            }
-            if (temp->rightNode)
-            {
-                q.push(temp->rightNode);
-            }
-        } // goto 51 no line
-    }
+    return root->data;
 }
+
+/* //******* Recursively *********
+
+int minimumOfTheTree(node *root)
+{
+        if (root->leftNode == null)
+            return root->data;
+        else
+            minimumOfTheTree(root->leftNode);
+}
+
+*/
+
+
+
+//********  Iteratively  *********
+
+int maximumOftheTree(node *root)
+{
+    while (root->rightNode != null)
+        root = root->rightNode;
+
+    return root->data;
+}
+
+/* //******* Recursively *********
+
+    int maximumOftheTree(node *root)
+    {
+        if (root->leftNode == null)
+            return root->data; 
+        else
+            maximumOftheTree(root->leftNode);
+    }
+
+*/
 
 int32_t main()
 {
@@ -88,12 +95,8 @@ int32_t main()
     // creating tree
     root = buildTree(root);
 
-    // input 
+    // input
     // 1 2 4 -1 -1 5 -1 -1 3 -1 6 -1 -1
-
-    // level order traversal
-    cout << nl << "Tree Visualization level Order Traversal " << nl;
-    levelOrderTraversal(root);
 
     CRACKED;
 }

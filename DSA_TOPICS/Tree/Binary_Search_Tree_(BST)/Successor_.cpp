@@ -3,7 +3,7 @@
 
 #include <bits/stdc++.h>
 #define CRACKED return 0;
-#define nl endl // NewLine
+#define nl endl; // NewLine
 #define null NULL
 using namespace std;
 
@@ -13,6 +13,7 @@ public:
     int data;
     node *leftNode;
     node *rightNode;
+    node *parent;
     node(int data)
     {
         this->data = data;
@@ -42,42 +43,43 @@ node *buildTree(node *root)
     return root;
 }
 
-void levelOrderTraversal(node *root)
+node *minimumOfTheTree(node *root)
 {
-    queue<node *> q;
-    q.push(root);
-    q.push(null);
+    while (root->leftNode != null)
+        root = root->leftNode;
 
-    while (!q.empty())
+    return root;
+}
+
+node *successor(node *ptr)
+{
+    // case 1:
+    // have right child
+    if (ptr->rightNode != null)
     {
-        node *temp = q.front();
-        q.pop();
+        return minimumOfTheTree(ptr->rightNode);
+    }
 
-        if (temp == null)
+    // case 2:
+    // have no roght child
+    else
+    {
+        /****  My logic not checked yet *****/
+        // node *traveller = ptr->parent;
+        // while (traveller->data <= ptr->data)
+        // {
+        //     traveller = traveller->parent;
+        // }
+        // return traveller;
+
+        node *traveller = ptr->parent;
+        while (traveller != null && traveller->rightNode == ptr)
         {
-            cout << nl;
-            /*
-                 when temp becomes null,
-                 at that moment last level parents childs are already
-                 entered in the queue thst is why here adding new null object
-            */
-            if (!q.empty())
-            {
-                q.push(null);
-            }
+            ptr = traveller;
+            traveller = ptr->parent;
         }
-        else
-        {
-            cout << temp->data << " ";
-            if (temp->leftNode)
-            {
-                q.push(temp->leftNode);
-            }
-            if (temp->rightNode)
-            {
-                q.push(temp->rightNode);
-            }
-        } // goto 51 no line
+
+        return traveller;
     }
 }
 
@@ -88,12 +90,8 @@ int32_t main()
     // creating tree
     root = buildTree(root);
 
-    // input 
+    // input
     // 1 2 4 -1 -1 5 -1 -1 3 -1 6 -1 -1
-
-    // level order traversal
-    cout << nl << "Tree Visualization level Order Traversal " << nl;
-    levelOrderTraversal(root);
 
     CRACKED;
 }

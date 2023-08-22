@@ -52,16 +52,22 @@ node *insert(node *&root, int key)
     return root;
 }
 
-int heightOfTree(node *root)
-{
-    if (root == null)
-        return 0;
+// int depth(node *root, int index)
+// {
+//     if (index)
+//         return 1;
+//     else
+//         return 1 + depth(root, index);
+// }
 
-    int leftChild = heightOfTree(root->leftNode);
-    int rightChild = heightOfTree(root->rightNode);
 
-    return max(leftChild, rightChild) + 1;
-}
+// int depth(node *root, node *indexPtr)
+// {
+//     if (root == indexPtr)
+//         return 1;
+//     else
+//     // return 1 + depth(root,indexPtr.)
+// }
 
 int32_t main()
 {

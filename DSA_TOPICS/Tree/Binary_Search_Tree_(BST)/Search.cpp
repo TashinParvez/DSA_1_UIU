@@ -3,7 +3,7 @@
 
 #include <bits/stdc++.h>
 #define CRACKED return 0;
-#define nl endl // NewLine
+#define nl endl; // NewLine
 #define null NULL
 using namespace std;
 
@@ -41,45 +41,35 @@ node *buildTree(node *root)
 
     return root;
 }
-
-void levelOrderTraversal(node *root)
+//***********  recursively    *********
+node *search(node *root, int value)
 {
-    queue<node *> q;
-    q.push(root);
-    q.push(null);
-
-    while (!q.empty())
+    if (root == null || root->data == value)
+        return root;
+    else
     {
-        node *temp = q.front();
-        q.pop();
-
-        if (temp == null)
-        {
-            cout << nl;
-            /*
-                 when temp becomes null,
-                 at that moment last level parents childs are already
-                 entered in the queue thst is why here adding new null object
-            */
-            if (!q.empty())
-            {
-                q.push(null);
-            }
-        }
+        if (value < root->data)
+            return search(root->leftNode, value);
         else
-        {
-            cout << temp->data << " ";
-            if (temp->leftNode)
-            {
-                q.push(temp->leftNode);
-            }
-            if (temp->rightNode)
-            {
-                q.push(temp->rightNode);
-            }
-        } // goto 51 no line
+            return search(root->rightNode, value);
     }
 }
+
+/* //**********  Iteratively  **************
+
+    node *search(node *root, int value)
+    {
+        while (root != null && root->data != value)
+         {
+              if (root->data > value)
+                  root = root->leftNode;
+              else
+                  root = root->rightNode;
+          }
+      return root;
+    }
+
+*/
 
 int32_t main()
 {
@@ -88,12 +78,16 @@ int32_t main()
     // creating tree
     root = buildTree(root);
 
-    // input 
+    // input
     // 1 2 4 -1 -1 5 -1 -1 3 -1 6 -1 -1
 
-    // level order traversal
-    cout << nl << "Tree Visualization level Order Traversal " << nl;
-    levelOrderTraversal(root);
+    node *ptr = search(root, 5);
+    if (ptr != null)
+    {
+        cout << "5 found on the tree" << nl;
+    }
+    else
+        cout << "5 didnt find on the tree" << nl;
 
     CRACKED;
 }
