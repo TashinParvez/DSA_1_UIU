@@ -22,10 +22,10 @@ public:
     }
 };
 
-node *minimumOfTheTree(node *root)
+node *maximumOfatree(node *root)
 {
-    while (root->leftNode != null)
-        root = root->leftNode;
+    while (root->rightNode != null)
+        root = root->rightNode;
 
     return root;
 }
@@ -33,32 +33,28 @@ node *minimumOfTheTree(node *root)
 // from left to parent means  = choto theke boro-te jaowa
 // from right to parent means = boro theke choto-te jaowa
 
-node *successor(node *ptr)
+node *predecessor(node *ptr)
 {
-    // case 1:
-    // have right child
-    if (ptr->rightNode != null)
+    if (ptr->leftNode)
     {
-        return minimumOfTheTree(ptr->rightNode);
+        return maximumOfatree(ptr->leftNode);
     }
-
-    // case 2:
-    // have no roght child
     else
     {
-        /****  My logic not checked yet *****/
-        // node *traveller = ptr->parent;
-        // while (traveller->data <= ptr->data)
-        // {
-        //     traveller = traveller->parent;
-        // }
-        // return traveller;
+        // my logic *** not checked yet
+        /*
+            node *parent = ptr->parent;
+             while (parent != null && parent->data > ptr->data)
+             {
+                 parent = parent->parent;
+             }
+            return parent;
+        */
 
         node *traveller = ptr->parent;
-        while (traveller != null && traveller->rightNode == ptr)
+        while (traveller != null && traveller == traveller->parent->leftNode)
         {
-            ptr = traveller;
-            traveller = ptr->parent;
+            traveller = traveller->parent;
         }
 
         return traveller;
