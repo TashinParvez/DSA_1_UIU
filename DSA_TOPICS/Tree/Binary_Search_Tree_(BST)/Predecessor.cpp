@@ -31,7 +31,7 @@ node *maximumOfatree(node *root)
 }
 
 // from left to parent means  = choto theke boro-te jaowa
-// from right to parent means = boro theke choto-te jaowa
+// from right to parent means = boro theke choto-te jaowa 
 
 node *predecessor(node *ptr)
 {

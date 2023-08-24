@@ -2,36 +2,42 @@
 //        ****************  Updated:    22-06-23     *************************\
 
 #include <bits/stdc++.h>
-#define faster                        \
-    ios_base::sync_with_stdio(false); \
-    cin.tie(0);                       \
-    cout.tie(0);
 #define CRACKED return 0;
-#define nl endl; // NewLine
-
-#define output(x) cout << x << nl // out
-#define printarray(arr, len)      \
-    for (int i = 0; i < len; i++) \
-    {                             \
-        cout << arr[i] << " ";    \
-        if (i + 1 == len)         \
-            cout << endl;         \
-    } // array print
+#define nl endl
 using namespace std;
+
+string s2 = "";
 
 void handleExpressions(stack<char> &expressions, char c)
 {
-    if (expressions.empty())
+    if (expressions.empty() || c == '(' || c == '^')
     {
         expressions.push(c);
     }
     else
     {
-        if (c == '+' || c == '-')
+        if (c == ')')
         {
-            while (expressions.empty() != 1)
+            while (expressions.top() != '(')
             {
-                cout << expressions.top();
+                // if (expressions.empty())
+                //     break;
+                s2 += expressions.top();
+                // cout << s2 << nl;
+                // cout << expressions.top();
+                expressions.pop();
+            }
+            expressions.pop();
+        }
+        else if (c == '+' || c == '-')
+        {
+            while (expressions.empty() != 1) // pop all elements from the stack
+            {
+                if (expressions.top() == '(')
+                    break;
+                s2 += expressions.top();
+                // cout << s2 << nl;
+                // cout << expressions.top();
                 expressions.pop();
             }
             expressions.push(c);
@@ -44,11 +50,16 @@ void handleExpressions(stack<char> &expressions, char c)
             }
             else
             {
-                while (expressions.top() != '+' || expressions.top() != '-')
+                while (expressions.top() == '*' || expressions.top() == '/' || expressions.top() == '^')
                 {
-                    cout << expressions.top();
+                    if (expressions.empty() || expressions.top() == '(')
+                        break;
+                    s2 += expressions.top();
+                    // cout << s2 << nl;
+                    // cout << expressions.top();
                     expressions.pop();
                 }
+                // cout << "Working for " << c << nl;
                 expressions.push(c);
             }
         }
@@ -57,29 +68,44 @@ void handleExpressions(stack<char> &expressions, char c)
 
 int32_t main()
 {
-    faster;
-    cout << "Enter Your expression" << nl;
+    cout << "Enter Your infix expression : ";
     string s;
     cin >> s;
 
+    // in:   8*(5^4+2)-6^2/(9*3)
+    // post: 854^2+*62^93*/-
+
+    // in:   9+2-5*6/3+2^3/4
+    // post: 92+56*3/-23^4/+
+
+    // in:   1+3^2+(5*6-4)*7
+    // post: 132^+56*4-7*+
+
     stack<char> expressions;
-    cout << "tashin " << s.length() << nl; // 1 = true
-                                           // 9+2-5*6/3+2*3/4
     for (int i = 0; i < s.length(); i++)
     {
-        // cout <<"tashin "<<nl; // 1 = true
         if (s[i] >= '0' && s[i] <= '9')
-            cout << s[i];
+        {
+            // cout << "INPUT  " << s[i] << nl;
+            s2 += s[i];
+            // cout << s2 << nl;
+            // cout << s[i];
+        }
         else
         {
+            // cout << "INPUT  " << s[i] << nl;
             handleExpressions(expressions, s[i]);
         }
     }
     while (expressions.empty() != 1)
     {
-        cout << expressions.top();
+        s2 += expressions.top();
+        // cout << s2 << nl;
+        // cout << expressions.top();
         expressions.pop();
     }
+
+    cout << nl << "Your postfix expression : " << s2 << nl << nl;
 
     CRACKED;
 }

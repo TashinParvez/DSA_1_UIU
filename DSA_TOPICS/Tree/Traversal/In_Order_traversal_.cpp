@@ -42,6 +42,7 @@ node *buildTree(node *root)
     return root;
 }
 
+// inorder = assending order
 void InOrderTraversal(node *root)
 {
     if (root == null)
