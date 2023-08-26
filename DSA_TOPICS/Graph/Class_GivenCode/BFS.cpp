@@ -67,6 +67,6 @@ void bfs(int source)
 }
 int main()
 {
-    bfs(4); // sending one as a root
+    bfs(4); // sending one node as a root
     return 0;
 }
