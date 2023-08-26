@@ -31,13 +31,13 @@ node *DeleteNode(node *root, int key)
         return root;
 
     if (key < root->key)
-        root->left = DeleteNode(root->left, key);
+        root->left = DeleteNode(root->left, key); 
     else if (key > root->key)
         root->right = DeleteNode(root->right, key);
     else
     {
         if (root->left == NULL)
-        {
+        { 
             node *temp = root->right;
             delete root;
             return temp;

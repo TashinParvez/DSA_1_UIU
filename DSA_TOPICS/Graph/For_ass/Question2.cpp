@@ -12,13 +12,14 @@ using namespace std;
 //                   0, 0, 0, 0, 0};
 
 // exmp 2
-int maze[5][5] = {0, 1, 0, 0, 2,
-                  0, 0, 0, 1, 0,
-                  0, 3, 1, 0, 0,
-                  0, 1, 0, 1, 0,
-                  0, 0, 0, 0, 0};
+// int maze[5][5] = {0, 1, 0, 0, 2,
+//                   0, 0, 0, 1, 0,
+//                   0, 3, 1, 0, 0,
+//                   0, 1, 0, 1, 0,
+//                   0, 0, 0, 0, 0};
 
 int visited[5][5] = {0};
+
 string s[5][5];
 
 void dfs(int row, int col, int search) // 1 0  0
@@ -52,6 +53,7 @@ void dfs(int row, int col, int search) // 1 0  0
         //     cout << str << nl;
         //     cout << "TASDJSHDAHS" << nl;
         // }
+
         if (search == 3)
         {
             cout << "Path with treasure: ";

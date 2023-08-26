@@ -55,12 +55,7 @@ void levelOrderTraversal(node *root)
 
         if (temp == null)
         {
-            cout << nl;
-            /*
-                 when temp becomes null,
-                 at that moment last level parents childs are already
-                 entered in the queue thst is why here adding new null object
-            */
+            cout << nl; 
             if (!q.empty())
             {
                 q.push(null);
@@ -77,7 +72,7 @@ void levelOrderTraversal(node *root)
             {
                 q.push(temp->rightNode);
             }
-        } // goto 51 no line
+        }  
     }
 }
 

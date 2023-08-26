@@ -41,6 +41,7 @@ node *buildTree(node *root)
 
     return root;
 }
+
 //***********  recursively    *********
 node *search(node *root, int value)
 {
