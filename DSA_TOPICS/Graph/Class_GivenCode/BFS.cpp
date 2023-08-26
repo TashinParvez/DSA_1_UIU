@@ -1,5 +1,7 @@
 #include <iostream>
 #include <queue>
+#define null NULL
+#define nl endl
 using namespace std;
 //                 0  1  2  3  4
 int graph[5][5] = {0, 1, 1, 1, 0,
@@ -7,6 +9,7 @@ int graph[5][5] = {0, 1, 1, 1, 0,
                    1, 0, 0, 1, 0,
                    1, 0, 1, 0, 1,
                    0, 1, 0, 1, 0};
+             //    0, 0, 0, 0, 0}; // not work
 
 void bfs(int source)
 {
@@ -29,6 +32,7 @@ void bfs(int source)
 
     while (!Q.empty())
     {
+
         int s = Q.front();
         Q.pop();
 
@@ -67,6 +71,7 @@ void bfs(int source)
 }
 int main()
 {
+    cout << nl;
     bfs(4); // sending one node as a root
     return 0;
 }

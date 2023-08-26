@@ -1,10 +1,7 @@
 #include <iostream>
 #include <queue>
-#define null NULL
-#define nl endl
 using namespace std;
-
-int maze[4][5] = {0, 1, 1, 0, 2,
+int maze[4][5] = {0, 1, 1, 0, 1,
                   0, 1, 1, 0, 1,
                   0, 1, 1, 0, 1,
                   0, 0, 0, 0, 1};
@@ -14,7 +11,7 @@ int visited[4][5] = {0, 0, 0, 0, 0,
                      0, 0, 0, 0, 0,
                      0, 0, 0, 0, 0};
 
-void dfs(int row, int col)
+void dfs(int row, int col) // (3,0) call
 {
     // base case
     if (row < 0 || row > 3 || col < 0 || col > 4)
@@ -23,10 +20,10 @@ void dfs(int row, int col)
     // output
     cout << "(" << row << " " << col << ")" << endl;
 
-    if (maze[row][col] == 2)
-        cout << "We are in the exit" << endl;
-
+    // clouring
     visited[row][col] = 1;
+
+    // only the way where is 0 
     if (maze[row][col + 1] != 1 && visited[row][col + 1] == 0)
     {
         dfs(row, col + 1);
@@ -43,6 +40,7 @@ void dfs(int row, int col)
     {
         dfs(row - 1, col);
     }
+
     visited[row][col] = 0;
 }
 
