@@ -4,23 +4,17 @@
 #define null NULL
 using namespace std;
 
-// exmp 1
-// int maze[5][5] = {0, 1, 2, 0, 0,
-//                   0, 0, 0, 1, 0,
-//                   0, 3, 1, 0, 0,
-//                   0, 1, 0, 1, 0,
-//                   0, 0, 0, 0, 0}; 
-
-// exmp 2
 int maze[5][5] = {0, 1, 0, 0, 2,
                   0, 0, 0, 1, 0,
                   0, 3, 1, 0, 0,
                   0, 1, 0, 1, 0,
-                  0, 0, 0, 0, 0}; 
+                  0, 0, 0, 0, 0};
 
 int visited[5][5] = {0};
+string s[5][5] = {""};
 
-string s[5][5];
+string shortway;
+int shoetWayLen = 0;
 
 void dfs(int row, int col, int search) // 1 0  0
 {
@@ -31,7 +25,7 @@ void dfs(int row, int col, int search) // 1 0  0
     // output
     // cout << "(" << row << " " << col << ")" << endl;
 
-    s[row][col] += "( " + to_string(row) + " " + to_string(col) + " ), ";
+    s[row][col] = s[row][col] + "( " + to_string(row) + " " + to_string(col) + " ), ";
 
     if (maze[row][col] == 3)
     {
@@ -41,18 +35,18 @@ void dfs(int row, int col, int search) // 1 0  0
 
         // cout << "TASDJSHDAHS        " << s[row][col] << nl;
         // cout << "TASDJSHDAHS" << nl;
-        // cout << "TASDJSHDAHS        " << s[row][col] << nl; 
+        // cout << "TASDJSHDAHS        " << s[row][col] << nl;
     }
 
     if (maze[row][col] == 2)
     {
-        // cout << "TASDJSHDAHS        " << s[row][col] << nl; 
+        // cout << "TASDJSHDAHS        " << s[row][col] << nl;
         // string str = s[row][col];
         // if (str[0] == 'y')
         // {
         //     cout << str << nl;
         //     cout << "TASDJSHDAHS" << nl;
-        // } 
+        // }
 
         if (search == 3)
         {
@@ -81,7 +75,6 @@ void dfs(int row, int col, int search) // 1 0  0
         s[row + 1][col] = s[row][col];
         dfs(row + 1, col, search);
     }
-
     // down
     if (maze[row - 1][col] != 1 && visited[row - 1][col] == 0)
     {
@@ -94,6 +87,6 @@ void dfs(int row, int col, int search) // 1 0  0
 
 int main()
 {
-    dfs(1, 0, 0); 
-    CRACKED; 
+    dfs(1, 0, 0);
+    CRACKED;
 }

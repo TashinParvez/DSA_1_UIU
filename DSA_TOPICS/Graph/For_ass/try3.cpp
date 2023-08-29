@@ -4,19 +4,14 @@
 #define null NULL
 using namespace std;
 
-// exmp 1
-// int maze[5][5] = {0, 1, 2, 0, 0,
-//                   0, 0, 0, 1, 0,
-//                   0, 3, 1, 0, 0,
-//                   0, 1, 0, 1, 0,
-//                   0, 0, 0, 0, 0}; 
+// string shortpath;
+// int strLen = 0;
 
-// exmp 2
 int maze[5][5] = {0, 1, 0, 0, 2,
                   0, 0, 0, 1, 0,
                   0, 3, 1, 0, 0,
                   0, 1, 0, 1, 0,
-                  0, 0, 0, 0, 0}; 
+                  0, 0, 0, 0, 0};
 
 int visited[5][5] = {0};
 
@@ -36,24 +31,10 @@ void dfs(int row, int col, int search) // 1 0  0
     if (maze[row][col] == 3)
     {
         search = 3;
-
-        // s[row][col] = "y" + s[row][col]; // type 2
-
-        // cout << "TASDJSHDAHS        " << s[row][col] << nl;
-        // cout << "TASDJSHDAHS" << nl;
-        // cout << "TASDJSHDAHS        " << s[row][col] << nl; 
     }
 
     if (maze[row][col] == 2)
     {
-        // cout << "TASDJSHDAHS        " << s[row][col] << nl; 
-        // string str = s[row][col];
-        // if (str[0] == 'y')
-        // {
-        //     cout << str << nl;
-        //     cout << "TASDJSHDAHS" << nl;
-        // } 
-
         if (search == 3)
         {
             cout << "Path with treasure: ";
@@ -94,6 +75,6 @@ void dfs(int row, int col, int search) // 1 0  0
 
 int main()
 {
-    dfs(1, 0, 0); 
-    CRACKED; 
+    dfs(1, 0, 0);
+    CRACKED;
 }
