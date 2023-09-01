@@ -12,7 +12,7 @@ class Graph
     int V;                                   // vertices
     unordered_map<int, vector<int>> adjList; // adj.List
 
-public:
+public: 
     Graph(int vertices) // constructor
     {
         this->V = vertices;
