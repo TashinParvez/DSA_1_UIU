@@ -8,8 +8,8 @@
 using namespace std;
 
 vector<int> graph[100];
-int visited[100];
-vector<int> result;
+int visited[100] = {0};
+stack<int> result;
 
 void dfs(int source)
 {
@@ -22,7 +22,7 @@ void dfs(int source)
         }
     }
     // all nodes are vsiited
-    result.push_back(source);
+    result.push(source);
 }
 
 int32_t main()
@@ -44,16 +44,17 @@ int32_t main()
         if (visited[i] == 0)
             dfs(i);
     }
-    
-    reverse(result.begin(), result.end());
+
     cout << nl << "Topological Order: ";
-    for (auto i = 0; i < result.size(); i++)
+    while (!result.empty())
     {
-        cout << result[i] << " ";
+        cout << result.top() << " ";
+        result.pop();
     }
     cout << nl;
     CRACKED;
 }
+
 /*
 
 5 4
