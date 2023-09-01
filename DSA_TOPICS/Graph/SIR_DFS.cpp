@@ -13,7 +13,7 @@ int visited[4][5] = {0, 0, 0, 0, 0,
 
 void dfs(int row, int col) // (3,0) call
 {
-    // base case
+    // base case 
     if (row < 0 || row > 3 || col < 0 || col > 4)
         return;
 
