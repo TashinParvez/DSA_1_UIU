@@ -23,6 +23,12 @@ public:
         adjList[u].push_back(v);
     }
 
+    /*
+         Rules is :
+           push only if  its indegree is zero
+           after every push decrease its child indegree and check its degree becomes 0 or not
+    */
+
     void topSort()
     {
         queue<int> q;
@@ -59,7 +65,7 @@ public:
             for (auto dest : adjList[x])
             {
                 indegree[dest]--;
-                if (indegree[dest] == 0)
+                if (indegree[dest] == 0) // checking any of child have 0 indegree or not
                     q.push(dest);
             }
         }
