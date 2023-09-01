@@ -18,7 +18,7 @@ void dfs(int source)
     {
         if (visited[graph[source][i]] == 0)
         {
-            dfs(visited[graph[source][i]]);
+            dfs(graph[source][i]);
         }
     }
     // all nodes are vsiited
