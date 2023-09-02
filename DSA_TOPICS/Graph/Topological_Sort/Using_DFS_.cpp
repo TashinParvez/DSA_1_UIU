@@ -21,7 +21,7 @@ void dfs(int source)
             dfs(graph[source][i]);
         }
     }
-    // all nodes are vsiited
+    // all nodes are vsiited 
     result.push(source);
 }
 
@@ -31,6 +31,7 @@ int32_t main()
     cout << "Enter nodes and edge number: ";
     cin >> nodes >> edges;
 
+    // input edges
     for (int i = 0; i < edges; i++)
     {
         cout << "Enter edges from u to v: ";

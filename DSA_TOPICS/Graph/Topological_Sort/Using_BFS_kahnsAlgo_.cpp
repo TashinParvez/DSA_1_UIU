@@ -77,7 +77,6 @@ public:
         }
         else
         {
-
             for (int x : result)
             {
                 cout << x << "\t";

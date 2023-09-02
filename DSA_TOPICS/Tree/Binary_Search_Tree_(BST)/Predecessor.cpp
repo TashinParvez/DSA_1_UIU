@@ -14,6 +14,7 @@ public:
     node *leftNode;
     node *rightNode;
     node *parent;
+    
     node(int data)
     {
         this->data = data;
