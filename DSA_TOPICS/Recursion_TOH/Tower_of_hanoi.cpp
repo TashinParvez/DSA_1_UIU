@@ -20,7 +20,7 @@
 using namespace std;
 int cnt = 0;
 
-// src aux des
+//               src    aux    des
 void TOH(int n, int a, int b, int c)
 {
     if (n > 0)
