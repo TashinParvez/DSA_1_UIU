@@ -3,7 +3,7 @@
 
 #include <bits/stdc++.h>
 #define CRACKED return 0;
-#define nl endl; // NewLine
+#define nl endl // NewLine
 using namespace std;
 
 void printArray(int arr[], int len)
@@ -53,7 +53,7 @@ void maxheapify(int arr[], int size, int index) //    maxheapify (arr, length - 
         cout << nl;
 
         cout << "------ Recursion ------" << nl;
-        Total_Call_count_of_maxheapify++; 
+        Total_Call_count_of_maxheapify++;
         maxheapify(arr, size, largest);
     }
     cout << nl;
@@ -90,7 +90,7 @@ int32_t main()
 
     cout << "Length " << length << nl;
     cout << nl;
-    cout << "---------- Calling build Max Heap Function --------" << nl;
+    cout << "---------- Calling build Max Heap Function --------" << nl << nl;
     buildMaxHeap(arr, length);
     cout << nl;
 
