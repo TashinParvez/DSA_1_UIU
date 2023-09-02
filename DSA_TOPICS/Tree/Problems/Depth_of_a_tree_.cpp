@@ -12,6 +12,7 @@ typedef struct Node
     int data;
     struct Node *leftNode;
     struct Node *rightNode;
+    struct Node *parent;
 } node;
 
 node *insert(node *&root, int key)
@@ -52,22 +53,13 @@ node *insert(node *&root, int key)
     return root;
 }
 
-// int depth(node *root, int index)
-// {
-//     if (index)
-//         return 1;
-//     else
-//         return 1 + depth(root, index);
-// }
-
-
-// int depth(node *root, node *indexPtr)
-// {
-//     if (root == indexPtr)
-//         return 1;
-//     else
-//     // return 1 + depth(root,indexPtr.)
-// }
+int depth(node *root, node *index)
+{
+    if (root == index)
+        return 0;
+    else
+        return 1 + depth(root, index->parent);
+}
 
 int32_t main()
 {
@@ -98,7 +90,7 @@ int32_t main()
 
     cout << nl;
     cout << "Total nodes ";
-    cout << heightOfTree(root);
+    // cout << heightOfTree(root);
     cout << nl;
 
     CRACKED;

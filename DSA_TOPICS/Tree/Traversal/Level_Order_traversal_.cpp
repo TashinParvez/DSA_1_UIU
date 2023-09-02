@@ -55,7 +55,7 @@ void levelOrderTraversal(node *root)
 
         if (temp == null)
         {
-            cout << nl; 
+            cout << nl;
             if (!q.empty())
             {
                 q.push(null);
@@ -72,7 +72,7 @@ void levelOrderTraversal(node *root)
             {
                 q.push(temp->rightNode);
             }
-        }  
+        }
     }
 }
 
@@ -83,7 +83,7 @@ int32_t main()
     // creating tree
     root = buildTree(root);
 
-    // input 
+    // input
     // 1 2 4 -1 -1 5 -1 -1 3 -1 6 -1 -1
 
     // level order traversal

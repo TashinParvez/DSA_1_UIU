@@ -49,13 +49,13 @@ node *buildTree(node *root)
 //     if(root == NULL)
 //         return newNode;
 
-//     node* traveller = root;
+//     node* traveller = root; 
 //     while(traveller != NULL)
 //     {
 //         if(traveller->left == NULL && key < traveller->value)
 //         {
 //             traveller->left = newNode;
-//             newNode->parent = traveller;
+//             newNode->parent = traveller; 
 //             break;
 //         }
 //         else if(traveller->right == NULL && key >= traveller->value)
