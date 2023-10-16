@@ -42,7 +42,15 @@ If you are reading my code for the first time maybe you will find some unknown l
 In **C++**, we use it to make our code shorter and easier to read. It lets us use standard C++ functions and objects without having to type `std::` before each one. It's like a shortcut that saves us time and makes our code cleaner.
 
 - I write **null** instead of writing `NULL`. [Why? Well, when writing code quickly, I sometimes forget to use all capital letters for "NULL" To avoid segmentation errors I use null and it's predefined.]
+
  
+## How to save this repository?
+
+- In the top-right corner of the page, click Star.
+
+![starring-a-repository](https://github.com/TashinParvez/DSA_1_UIU/assets/84122972/f0e53cf8-185c-48dd-9905-348f80452463)
+
+
 
 
 ## Author
