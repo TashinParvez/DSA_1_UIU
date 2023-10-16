@@ -3,6 +3,16 @@ Hey, folks!
 
 This repository will be immensely helpful if you are taking a `Data Structure and Algorithm-I` course or practicing **DSA-1 topics**. This brief article is here to help you become familiar with its contents.
 
+
+## How This Repository Can Help You
+
+- **Quick Reference:** The repository can serve as a quick reference guide. You can easily find relevant code for DSA topics, saving time on online resource searches.
+- You will know which problems I solved before any of my exams; this will help you get an idea about the exam.
+- **You are getting more understandable code.**
+- **Coding Practice:** You can use the code for coding practice. You can modify and experiment with the code to reinforce your understanding of DSA topics.
+- **Transition to C++:** It will help you transition from C to C++; this code can be an excellent resource to help you get up to speed with the language.
+
+
 ## Directory Contents
 First of all, you have seen 3 folders.
  - **Class(LAB)**
@@ -34,3 +44,6 @@ In **C++**, we use it to make our code shorter and easier to read. It lets us us
 - I write **null** instead of writing `NULL`. [Why? Well, when writing code quickly, I sometimes forget to use all capital letters for "NULL" To avoid segmentation errors I use null and it's predefined.]
 
 
+
+## Author
+- [@TashinParvez](https://github.com/TashinParvez)
