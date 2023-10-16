@@ -25,10 +25,10 @@ void TOH(int n, int a, int b, int c)
 {
     if (n > 0)
     {
-        TOH(n - 1, a, c, b);
-        cout << a << " to " << c << nl;
+        TOH(n - 1, a, c, b); // n src des aux
+        cout << a << " to " << c << nl; // print
         cnt++;
-        TOH(n - 1, b, a, c);
+        TOH(n - 1, b, a, c); // n aux src des
     }
 }
 

@@ -10,10 +10,12 @@ using namespace std;
 vector<int> graph[100];
 int visited[100] = {0};
 stack<int> result;
+int cnt = 1;
 
 void dfs(int source)
 {
     visited[source] = 1;
+
     for (int i = 0; i < graph[source].size(); i++)
     {
         if (visited[graph[source][i]] == 0)
@@ -21,10 +23,21 @@ void dfs(int source)
             dfs(graph[source][i]);
         }
     }
-    // all nodes are vsiited 
-    result.push(source);
-}
 
+    // all nodes are vsiited
+
+    cout << "PUSH " << cnt << "  " << source << nl; // debug
+    // pushing when doing backtracking
+    result.push(source);
+    cnt++;
+}
+/*
+
+---------------  Logic of TopSort  -----------------
+if  from 1 no edge i can go o 4, 5 ,7 edges
+then 1 should be come first then these edges in sorting order
+
+*/
 int32_t main()
 {
     int nodes, edges;
@@ -42,6 +55,7 @@ int32_t main()
 
     for (int i = 1; i <= nodes; i++)
     {
+        // calling DFS
         if (visited[i] == 0)
             dfs(i);
     }
@@ -55,6 +69,18 @@ int32_t main()
     cout << nl;
     CRACKED;
 }
+/*
+  6 7
+
+  1 2
+  2 4
+  1 3
+  3 4
+  4 6
+  4 5
+   5 6
+
+*/
 
 /*
 

@@ -46,8 +46,8 @@ node *successor(node *ptr)
     // have no roght child
     else
     {
-        /****  My logic not checked yet *****/
-        // node *traveller = ptr->parent;
+        /****  My logic *****/
+        // node *traveller = ptr->parent; 
         // while (traveller->data <= ptr->data)
         // {
         //     traveller = traveller->parent;

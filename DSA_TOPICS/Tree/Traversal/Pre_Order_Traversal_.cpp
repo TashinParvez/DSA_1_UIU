@@ -44,6 +44,10 @@ node *buildTree(node *root)
 
 void preOrderTraversal(node *root)
 {
+    // first print
+    // then left node visit
+    // then right node visit
+    
     if (root == null)
         return;
     cout << root->data << " ";

@@ -42,12 +42,12 @@ node *predecessor(node *ptr)
     }
     else
     {
-        // my logic *** not checked yet
+        // my logic ***
         /*
-            node *parent = ptr->parent;
+            node *parent = ptr->parent ;
              while (parent != null && parent->data > ptr->data)
              {
-                 parent = parent->parent;
+                 parent = parent->parent; 
              }
             return parent;
         */

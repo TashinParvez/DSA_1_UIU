@@ -9,7 +9,7 @@ using namespace std;
 
 vector<int> graph[100];
 int visited[100];
- 
+
 void dfs(int source)
 {
     visited[source] = 1;

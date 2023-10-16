@@ -38,6 +38,7 @@ node *insert(node *root, int key)
     node *traveller = root;
     if (traveller == null)
     {
+        // empty tree
         return newNode;
     }
 
@@ -81,7 +82,7 @@ node *transplant(node *root, node *nodeToBeReplaced, node *newNode)
         nodeToBeReplaced->parent->leftNode = newNode;
     else
         nodeToBeReplaced->parent->rightNode = newNode;
-        
+
     return root;
 }
 
@@ -178,6 +179,10 @@ void postOrderTraversal(node *root)
 
 void preOrderTraversal(node *root)
 {
+    // first print
+    // then left node visit 
+    // then right node visit
+
     if (root == null)
         return;
     cout << root->data << " ";
@@ -193,6 +198,21 @@ void InOrderTraversal(node *root)
     cout << root->data << " ";
     InOrderTraversal(root->rightNode);
 }
+
+/*
+
+int heightOfTree(node *root)
+{
+    if (root == null)
+        return 0;
+
+    int leftChild = heightOfTree(root->leftNode);
+    int rightChild = heightOfTree(root->rightNode);
+
+    return max(leftChild, rightChild) + 1;
+}
+
+*/
 
 int heightCount(node *root) // levelOrderTraversal
 {

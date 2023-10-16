@@ -10,6 +10,7 @@ using namespace std;
 int parent[100];
 
 // find function
+// return it's parent
 int find(int a)
 {
     if (parent[a] == a)
@@ -25,13 +26,12 @@ void unionSet(int a, int b)
     int u = parent[a];
     int v = parent[b];
     if (u == v)
-        cout << "they are in sem set" << nl;
+        cout << "They are in the same set" << nl;
     else
         parent[b] = a;
 }
 
-
-
 int32_t main()
-{ 
+{
+    // main func
 }

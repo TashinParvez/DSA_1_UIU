@@ -64,6 +64,8 @@ void levelOrderTraversal(node *root)
         else
         {
             cout << temp->data << " ";
+            // only left and right node cz it's a binary tree
+            
             if (temp->leftNode)
             {
                 q.push(temp->leftNode);
