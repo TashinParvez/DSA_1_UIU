@@ -1,7 +1,7 @@
 # DSA_1_UIU
 Hey, folks! 
 
-This repository will be immensely helpful if you are taking a Data Structure and Algorithm-I course or practicing DSA-1 topics. This brief article is here to help you become familiar with its contents.
+This repository will be immensely helpful if you are taking a `Data Structure and Algorithm-I` course or practicing **DSA-1 topics**. This brief article is here to help you become familiar with its contents.
 
 ## Directory Contents
 First of all, you have seen 3 folders.
