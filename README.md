@@ -47,8 +47,11 @@ In **C++**, we use it to make our code shorter and easier to read. It lets us us
 ## How to save this repository?
 
 - In the top-right corner of the page, click Star.
-
+  
 ![starring-a-repository](https://github.com/TashinParvez/DSA_1_UIU/assets/84122972/f0e53cf8-185c-48dd-9905-348f80452463)
+
+## Viewing this repository on your profile
+![Web capture_16-10-2023_195122_docs github com](https://github.com/TashinParvez/DSA_1_UIU/assets/84122972/5b05be9f-feb5-4c1b-88d6-e37c0a395e27)
 
 
 
