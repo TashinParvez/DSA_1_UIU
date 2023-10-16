@@ -18,7 +18,7 @@ First of all, you have seen 3 folders.
  - **Class(LAB)**
    
     It is not necessary for you. [Contains some lab codes]
- - [DSA_LAB_EXAM_Question_Solve](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solvehttps://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve)
+ - [DSA_LAB_EXAM_Question_Solve](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve)
 
    Hopefully, you can determine the contents of the next folder from its name.
  - **[DSA_TOPICS](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_TOPICS)**
