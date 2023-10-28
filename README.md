@@ -1,4 +1,9 @@
 # DSA_1_UIU
+
+![GitHub repo size](https://img.shields.io/github/repo-size/TashinParvez/DSA_1_UIU)
+![GitHub contributors](https://img.shields.io/github/contributors/TashinParvez/DSA_1_UIU)
+![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/TashinParvez/DSA_1_UIU)
+
 Hey, folks! 
 
 This repository will be immensely helpful if you are taking a **Data Structure and Algorithm-I** course or practicing **DSA-1 topics**. This brief article is here to help you become familiar with its contents.
