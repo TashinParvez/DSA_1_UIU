@@ -24,7 +24,7 @@ First of all, you have seen 3 folders.
    
     It is not necessary for you. [Contains some lab codes]
    
-  - [DSA_LAB_EXAM_Question_Solve](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve)/
+  - [DSA_LAB_EXAM_Question_Solve](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve)
     - [AnotherSecAssignment 1](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/Akash_assignment)
     - [CT_1](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/CT_1)
     - [CT_2_SEC_C](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/CT_2_SEC_C)
