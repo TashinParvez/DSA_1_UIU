@@ -18,7 +18,7 @@ This repository will be immensely helpful if you are taking a **Data Structure a
 - **Transition to C++:** It will help you transition from C to C++; this code can be an excellent resource to help you get up to speed with the language.
 
 
-## Directory Contents
+## Table of Contents
 First of all, you have seen 3 folders.
  - **Class(LAB)**
    
