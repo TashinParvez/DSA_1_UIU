@@ -25,17 +25,17 @@ First of all, you have seen 3 folders.
     It is not necessary for you. [Contains some lab codes]
    
   - [DSA_LAB_EXAM_Question_Solve](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve)
-    - [AnotherSecAssignment 1](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/Akash_assignment)
-    - [CT_1](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/CT_1)
-    - [CT_2_SEC_C](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/CT_2_SEC_C)
-    - [CT_2_Section_A](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/CT_2_Section_A)
-    - [MID_SEC_B](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/MID_SEC_B)
-    - [MID_SEC_C](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/MID_SEC_C)
-    - [MID_SEC_E_Spring_23](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve/MID_SEC_E_Spring_23)
-    - [Online_3_Summer23_Sec_E](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/Online_3_Summer23_Sec_E)
-    - [Summer23_Final_](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/Summer23_Final_)
-    - [Summer23_LAB_assignment_2_TREE_GRAPH_BFS_DFS](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/Summer23_LAB_assignment_2_TREE_GRAPH_BFS_DFS)
-    - [AnotherSecAssignment 2](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/joyasree_assignment)
+    - [AnotherSecAssignment 1](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve/Akash_assignment)
+    - [CT_1](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve/CT_1)
+    - [CT_2_SEC_C](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve/CT_2_SEC_C)
+    - [CT_2_Section_A](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve/CT_2_Section_A)
+    - [MID_SEC_B](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve/MID_SEC_B)
+    - [MID_SEC_C](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve/MID_SEC_C)
+    - [MID_SEC_E_Spring_23](https://github.com/TashinParvez/DSA_1_UIU/tree/main/tree/main/DSA_LAB_EXAM_Question_Solve/MID_SEC_E_Spring_23)
+    - [Online_3_Summer23_Sec_E](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve/Online_3_Summer23_Sec_E)
+    - [Summer23_Final_](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve/Summer23_Final_)
+    - [Summer23_LAB_assignment_2_TREE_GRAPH_BFS_DFS](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve/Summer23_LAB_assignment_2_TREE_GRAPH_BFS_DFS)
+    - [AnotherSecAssignment 2](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve/joyasree_assignment)
 
    Hopefully, you can determine the contents of the next folder from its name.
  - **[DSA_TOPICS](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_TOPICS)**
