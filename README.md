@@ -31,7 +31,7 @@ First of all, you have seen 3 folders.
     - [CT_2_Section_A](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/CT_2_Section_A)
     - [MID_SEC_B](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/MID_SEC_B)
     - [MID_SEC_C](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/MID_SEC_C)
-    - [MID_SEC_E_Spring_23](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/MID_SEC_E_Spring_23)
+    - [MID_SEC_E_Spring_23](https://github.com/TashinParvez/DSA_1_UIU/tree/main/DSA_LAB_EXAM_Question_Solve/MID_SEC_E_Spring_23)
     - [Online_3_Summer23_Sec_E](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/Online_3_Summer23_Sec_E)
     - [Summer23_Final_](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/Summer23_Final_)
     - [Summer23_LAB_assignment_2_TREE_GRAPH_BFS_DFS](https://github.com/TashinParvez/DSA_1_UIU/DSA_LAB_EXAM_Question_Solve/Summer23_LAB_assignment_2_TREE_GRAPH_BFS_DFS)
